@@ -95,13 +95,13 @@
             const template = document.querySelector("template");
 
             charList.feed.entry.forEach(person => {
-                let klon = template.cloneNode(true).content;
-                klon.querySelector("h2").textContent += person.gsx$navn.$t;
-                klon.querySelector("h2").textContent += person.gsx$efternavn.$t;
-                klon.querySelector("p").textContent += person.gsx$job.$t;
+                let clone = template.cloneNode(true).content;
+                clone.querySelector("h2").textContent += person.gsx$navn.$t;
+                clone.querySelector("h2").textContent += person.gsx$efternavn.$t;
+                clone.querySelector("p").textContent += person.gsx$job.$t;
 
-                klon.querySelector("img").src = person.gsx$billede.$t;
-                container.appendChild(klon);
+                clone.querySelector("img").src = person.gsx$billede.$t;
+                container.appendChild(clone);
             });
         }
 
